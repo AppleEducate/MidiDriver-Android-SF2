@@ -1204,4 +1204,8 @@ public class SoftSynthesizer implements AudioSynthesizer,
 
         throw new MidiUnavailableException("No transmitter available");
     }
+
+    public void flush() {
+        sourceDataLine.flush();
+    }
 }
